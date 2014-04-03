@@ -1,0 +1,25 @@
+.cover {
+	background-color: blue;
+	text-align: center;
+}
+
+.cover:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.cover header {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 300px;
+}
+
+.animation {
+	opacity: 0;
+}
+
+.intro {
+	background-color: yellow;
+}

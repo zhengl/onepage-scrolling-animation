@@ -1,0 +1,11 @@
+{
+  "name": "astro",
+  "version": "0.0.0",
+  "authors": [
+    "Zheng Li <loylizh@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "onepage-scroll": "~1.1.1"
+  }
+}
