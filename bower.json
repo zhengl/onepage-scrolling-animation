@@ -6,6 +6,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "onepage-scroll": "~1.1.1"
+    "jquery": "~2.1.0",
+    "onepage-scroll": "~1.1.1",
+    "animate.css": "~3.1.0",
+    "bootstrap": "~3.1.1"
   }
 }
