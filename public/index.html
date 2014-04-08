@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="styles/main.min.css">
 		<style type="text/css">
 			.loading .main {
@@ -11,10 +12,10 @@
 				position: absolute;
 				left:50%;
 				top:50%;
-				width: 200px;
-				height: 200px;
-				margin-top: -100px;
-				margin-left: -100px;
+				width: 100px;
+				height: 100px;
+				margin-top: -50px;
+				margin-left: -50px;
 				background: #f39c12;
 				border-radius: 50%;
 				z-index: 999;
@@ -103,11 +104,11 @@
 					opacity: 1;
 				}
 				100%{
-					-webkit-transform:scale(20);
-					-ms-transform:scale(20);
-					-o-transform:scale(20);
-					-moz-transform:scale(20);
-					transform:scale(20);
+					-webkit-transform:scale(30);
+					-ms-transform:scale(30);
+					-o-transform:scale(30);
+					-moz-transform:scale(30);
+					transform:scale(30);
 					opacity: 0;
 				}
 			}			
@@ -137,10 +138,12 @@
 				</article>
 			</section>
 			<section class="more">
-					<header>
-						<h1 class="animation" data-animation="animated fadeInDown">Map</h1>
-					</header>
-					<div id="map"></div>
+					<div class="text-container half">
+						<header>
+							<h1 class="animation" data-animation="animated fadeInDown">Map</h1>
+						</header>
+					</div>
+					<div id="map" class="half"></div>
 			</section>			
 		</div>
 		<script type="text/javascript" src="scripts/main.min.js"></script>

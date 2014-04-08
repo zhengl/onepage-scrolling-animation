@@ -20,6 +20,10 @@
 	height: 100%;	
 }
 
+.text-container {
+	padding: 30px;
+}
+
 @media (max-width: 769px) {
 	.half {
 		width: 100%;
@@ -60,8 +64,7 @@
 	}
 
 	.cover .envelope-container {
-		width: 400px;
-		margin-bottom: -200px;
+		width: 300px;
 	}	
 }
 
@@ -83,12 +86,6 @@
 	background-color: yellow;
 }
 
-.intro .text-container {
-	padding: 30px;
-}
-
 /* section more */
 #map {
-	height: 300px;
-	width: 300px;
 }

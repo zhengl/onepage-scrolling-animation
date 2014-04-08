@@ -8,15 +8,15 @@ function triggerAnimation() {
 
 function initMap(){
 	createMap();
-	setMapEvent();
-	addMapControl();
+	// setMapEvent();
+	// addMapControl();
 }
 
 function createMap(){
 	var map = new BMap.Map("map");
 	var point = new BMap.Point(114.025974,22.546054);
 	map.centerAndZoom(point,12);
-	window.map = map;
+	// window.map = map;
 }
 
 function setMapEvent(){
