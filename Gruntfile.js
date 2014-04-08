@@ -23,6 +23,7 @@ module.exports = function(grunt) {
 					'public/scripts/main.min.js': [
 						'bower_components/jquery/dist/jquery.min.js',
 						'bower_components/onepage-scroll/jquery.onepage-scroll.js',
+						'assets/js/iconic.min.js',
 						'assets/js/main.js',
 					]
 				}
@@ -34,12 +35,22 @@ module.exports = function(grunt) {
 				files: ['assets/**/*.js', 'assets/**/*.css', 'Gruntfile.js'],
 				tasks: ['cssmin', 'uglify']
 			}
-		}		
+		},
+
+		connect: {
+			server: {
+					options: {
+						base: 'public/',
+						port: 3000
+				}
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
-	grunt.registerTask('default', ['cssmin', 'uglify']);
+	grunt.registerTask('default', ['cssmin', 'uglify', 'connect', 'watch']);
 };

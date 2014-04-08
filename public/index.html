@@ -2,19 +2,148 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles/main.min.css">
+		<style type="text/css">
+			.loading .main {
+				display: none;
+			}
+
+			.circle {
+				position: absolute;
+				left:50%;
+				top:50%;
+				width: 200px;
+				height: 200px;
+				margin-top: -100px;
+				margin-left: -100px;
+				background: #f39c12;
+				border-radius: 50%;
+				z-index: 999;
+			}
+
+			.loading .circle {
+				-webkit-animation-name: loading-animation;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-fill-mode: both;
+
+				-ms-animation-name: loading-animation;
+				-ms-animation-duration: 2s;
+				-ms-animation-iteration-count: infinite;
+				-ms-animation-fill-mode: both;
+
+				-o-animation-name: loading-animation;
+				-o-animation-duration: 2s;
+				-o-animation-iteration-count: infinite;
+				-o-animation-fill-mode: both;
+
+				-moz-animation-name: loading-animation;
+				-moz-animation-duration: 2s;
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-fill-mode: both;
+
+				animation-name: loading-animation;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: both;	
+			}
+
+			.loaded .circle {
+				-webkit-animation-name: loaded-animation;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-fill-mode: both;
+
+				-ms-animation-name: loaded-animation;
+				-ms-animation-duration: 2s;
+				-ms-animation-fill-mode: both;
+
+				-o-animation-name: loaded-animation;
+				-o-animation-duration: 2s;
+				-o-animation-fill-mode: both;
+
+				-moz-animation-name: loaded-animation;
+				-moz-animation-duration: 2s;
+				-moz-animation-fill-mode: both;
+
+				animation-name: loaded-animation;
+				animation-duration: 2s;
+				animation-fill-mode: both;																
+			}
+
+			@-webkit-keyframes loading-animation{
+				0% {
+					-webkit-transform:scale(1);
+					-ms-transform:scale(1);
+					-o-transform:scale(1);
+					-moz-transform:scale(1);
+					transform:scale(1);
+				}
+				50%{
+					-webkit-transform:scale(0.5);
+					-ms-transform:scale(0.5);
+					-o-transform:scale(0.5);
+					-moz-transform:scale(0.5);
+					transform:scale(0.5);
+				}
+				100%{
+					-webkit-transform:scale(1);
+					-ms-transform:scale(1);
+					-o-transform:scale(1);
+					-moz-transform:scale(1);
+					transform:scale(1);
+				}
+			}
+
+			@-webkit-keyframes loaded-animation{
+				0% {
+					-webkit-transform:scale(1);
+					-ms-transform:scale(1);
+					-o-transform:scale(1);
+					-moz-transform:scale(1);
+					transform:scale(1);
+					opacity: 1;
+				}
+				100%{
+					-webkit-transform:scale(20);
+					-ms-transform:scale(20);
+					-o-transform:scale(20);
+					-moz-transform:scale(20);
+					transform:scale(20);
+					opacity: 0;
+				}
+			}			
+		</style>
 	</head>
-	<body>
+	<body class="loading">
+		<div class="circle"></div>
 		<div class="main">
 			<section class="cover">
-				<header class="animation" data-animation="animated fadeInDown">
-					<h1>Title</h1>
-					<h2>Subtitle</h2>
-				</header>				
+				<div class="center">
+					<header class="animation" data-animation="animated fadeInDown">
+						<h1>Title</h1>
+						<h2>Subtitle</h2>
+					</header>
+					<div class="envelope-container">			
+						<img data-state="open" data-src="img/envelope.svg" class="iconic iconic-fluid" />
+					</div>
+				</div>
 			</section>
 			<section class="intro">
-				<h1 class="animation" data-animation="animated fadeInDown">Hello World!</h1>
-			</section>		
+				<div class="image-container half"></div>
+				<article class="text-container half">
+					<header>
+						<h1 class="animation" data-animation="animated fadeInDown">Hello World!</h1>
+					</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, autem provident dicta minima fugiat iste laboriosam ullam eveniet tempore placeat. Itaque, dolores odit accusamus qui odio libero dolorum delectus animi.
+				</article>
+			</section>
+			<section class="more">
+					<header>
+						<h1 class="animation" data-animation="animated fadeInDown">Map</h1>
+					</header>
+					<div id="map"></div>
+			</section>			
 		</div>
 		<script type="text/javascript" src="scripts/main.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 	</body>
 </html>
