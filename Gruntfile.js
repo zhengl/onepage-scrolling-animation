@@ -52,5 +52,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
+	grunt.registerTask('build', ['cssmin', 'uglify']);
 	grunt.registerTask('default', ['cssmin', 'uglify', 'connect', 'watch']);
 };
